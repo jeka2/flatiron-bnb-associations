@@ -28,10 +28,12 @@ ActiveRecord::Schema.define(version: 20210116164456) do
     t.datetime "updated_at",      null: false
     t.integer  "neighborhood_id"
     t.integer  "host_id"
+    t.integer  "user_id"
     t.integer  "city_id"
     t.index ["city_id"], name: "index_listings_on_city_id"
     t.index ["host_id"], name: "index_listings_on_host_id"
     t.index ["neighborhood_id"], name: "index_listings_on_neighborhood_id"
+    t.index ["user_id"], name: "index_listings_on_user_id"
   end
 
   create_table "neighborhoods", force: :cascade do |t|
